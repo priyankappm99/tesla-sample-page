@@ -1,26 +1,39 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import"./global.scss"
+import Footer from "./components/teslaHome/Footer";
+import HeroSection from "./components/teslaHome/HeroSection";
+import KeyFeatures from "./components/teslaHome/KeyFeatures";
+import Sustainability from "./components/teslaHome/Sustainability";
+import NavigationBar from "./components/teslaHome/NavigationBar";
+import Performance from "./components/teslaHome/Performance";
+import ProductSection from './components/products/ProductSection';
+import ProductList from './components/products/ProductList';
+import ProductDetail from './components/products/ProductDetail';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+ 
+    return (
+      <Router>
+      <NavigationBar />
+      <Routes>
+        <Route path="/" element={
+          <div className='scroll-hidden'>
+            <HeroSection />
+            <ProductSection />
+            <KeyFeatures />
+            <Performance />
+            <Sustainability />
+          </div>
+        } />
+        <Route path="/products" element={<ProductList />} />
+        <Route path="/products/:id" element={<ProductDetail />} />
+      </Routes>
+      <Footer />
+    </Router>
+
+    );
+
 }
 
 export default App;
