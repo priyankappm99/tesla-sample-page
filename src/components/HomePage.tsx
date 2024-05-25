@@ -1,6 +1,6 @@
 import React from 'react';
-import teslaModelY from '../assets/teslaModelY.avif';
 import teslaModelX from '../assets/teslaModelX.avif';
+import teslaModelS from '../assets/teslaModelS.avif';
 import teslaModelZ from '../assets/teslaModelZ.webp';
 import "./homepage.scss"
 const HomePage = () => {
@@ -8,7 +8,7 @@ const HomePage = () => {
         <div>
             <div>
                 <div className="script-img" style={{ display: "flex", position: "relative" }}>
-                    <img className="top-bg-image" src={teslaModelY}></img>
+                    <img className="top-bg-image" src={teslaModelX}></img>
                 </div>
                 <div className="top-detail-card" >
                     <div className="card-background">
@@ -214,7 +214,7 @@ const HomePage = () => {
                     </div>
                 </div>
                 <div className="AI-car-section flex flex-1">
-                    <img className="gray-car" src={teslaModelX} />
+                    <img className="gray-car" src={teslaModelS} />
                     <div className="car-right flex-1">
                         <div className="gray-car-title">Benefits of Metaverse Virtual Showroom Development</div>
                         <div className="gray-car-content">Developing a virtual showroom within the metaverse offers a plethora of benefits

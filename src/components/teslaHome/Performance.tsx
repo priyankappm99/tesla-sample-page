@@ -1,9 +1,10 @@
 import React from 'react';
-import "./teslahome.scss"
+import "./teslahome.scss";
+import teslaModelZ from '../../assets/teslaModelZ.webp';
 
 const Performance = () => {
   return (
-    <section id="performance" className="performance">
+    <section id="performance" className="performance" style={{ backgroundImage: `url(${teslaModelZ})` }}>
       <h2>Unmatched Performance</h2>
       <div className="performance-details">
         <div className="detail-item">

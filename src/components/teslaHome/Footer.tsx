@@ -2,7 +2,7 @@ import React from 'react';
 import "./teslahome.scss"
 const Footer = () => {
   return (
-    <footer className="footer">
+    <footer className="footer" id="contact">
       <div className="social-media">
         <a href="https://www.facebook.com/tesla" target="_blank" rel="noopener noreferrer">Facebook</a>
         <a href="https://www.twitter.com/tesla" target="_blank" rel="noopener noreferrer">Twitter</a>

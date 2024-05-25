@@ -1,8 +1,10 @@
 import React from 'react';
+import './teslahome.scss'; // Import your SCSS file
+import teslaModelS from '../../assets/teslaModelS.avif';
 
 const KeyFeatures = () => {
   return (
-    <section id="features" className="key-features">
+    <section id="features" className="key-features" style={{ backgroundImage: `url(${teslaModelS})` }}>
       <h2>Key Features</h2>
       <div className="features-list">
         <div className="feature-item">

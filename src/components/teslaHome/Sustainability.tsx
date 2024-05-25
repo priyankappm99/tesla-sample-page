@@ -1,10 +1,11 @@
 import React from 'react';
-import "./teslahome.scss"
+import './teslahome.scss';
+import teslaModelY from '../../assets/teslaModelY.avif';
 
 const Sustainability = () => {
   return (
-    <section id="sustainability" className="sustainability">
-      <h2>Sustainability at Its Core</h2>
+    <section id="sustainability" className="sustainability" style={{ backgroundImage: `url(${teslaModelY})` }}>
+      <h2 style={{color:"black"}}>Sustainability at Its Core</h2>
       <div className="sustainability-details">
         <div className="detail-item">
           <h3>Environmental Impact</h3>

@@ -60,6 +60,34 @@
         }
       }
     }
+    .search-bar {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px; /* Adjust margin as needed */
+      }
+      
+      .search-box {
+        position: relative;
+        width: 100%;
+        max-width: 400px; /* Set the maximum width of the search box */
+      }
+      
+      .search-input {
+        width: 100%;
+        padding: 10px 40px 10px 15px; /* Adjust padding to accommodate the icon */
+        border: 1px solid #ccc; /* Example border color */
+        border-radius: 5px;
+        font-size: 16px;
+      }
+      
+      .search-icon {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+      }
+      
   }
   .product-section {
     padding: 60px 20px;
@@ -154,8 +182,27 @@
         }
       }
     }
+    
   }
   
+  .product-detail {
+    text-align: center;
   
+    h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+  
+    .description-container {
+      background-color: #D9E7D1;
+      padding: 20px;
+    }
+  
+    .description {
+      color: #101010; /* White text */
+      font-size: 16px;
+      line-height: 1.5;
+    }
+  } 
   
   
