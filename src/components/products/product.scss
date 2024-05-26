@@ -1,8 +1,8 @@
+/* product.scss */
 .product-list-page {
   padding: 60px 20px;
   text-align: center;
-    padding-top: 10%;
-
+  padding-top: 10%;
 
   h2 {
     font-size: 36px;
@@ -17,11 +17,15 @@
     .product-item {
       margin: 20px;
       max-width: 300px;
+      width: 100%;
       text-align: left;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       border-radius: 10px;
       overflow: hidden;
       transition: transform 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
 
       &:hover {
         transform: translateY(-5px);
@@ -35,6 +39,10 @@
 
       .product-details {
         padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex-grow: 1;
 
         h3 {
           font-size: 24px;
@@ -43,7 +51,7 @@
 
         p {
           font-size: 18px;
-          margin-bottom: 20px;
+          margin-bottom: 10px;
         }
 
         .book-now-button {
@@ -67,22 +75,18 @@
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
-    /* Adjust margin as needed */
   }
 
   .search-box {
     position: relative;
     width: 100%;
     max-width: 400px;
-    /* Set the maximum width of the search box */
   }
 
   .search-input {
     width: 100%;
     padding: 10px 40px 10px 15px;
-    /* Adjust padding to accommodate the icon */
     border: 1px solid #ccc;
-    /* Example border color */
     border-radius: 5px;
     font-size: 16px;
   }
@@ -95,7 +99,37 @@
     cursor: pointer;
   }
 
+  .pagination {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+
+    li {
+      margin: 0 5px;
+
+      button {
+        padding: 10px 15px;
+        border: 1px solid #ccc;
+        background-color: #fff;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: #f0f0f0;
+        }
+
+        &.active {
+          background-color: #e82127;
+          color: #fff;
+          border-color: #e82127;
+        }
+      }
+    }
+  }
 }
+
+
 
 .product-section {
   padding: 60px 20px;
