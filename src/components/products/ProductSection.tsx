@@ -13,7 +13,7 @@ const products = [
 
 const ProductSection = () => {
   return (
-    <section className="product-section scroll-hidden" style={{ backgroundImage: `url(${teslaModelX})` }}>
+    <section id="models" className="product-section scroll-hidden" style={{ backgroundImage: `url(${teslaModelX})` }}>
       <h2>Our Models</h2>
       <div className="product-list">
         {products.map(product => (
