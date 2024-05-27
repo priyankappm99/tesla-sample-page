@@ -10,6 +10,7 @@ import Performance from './components/teslaHome/Performance';
 import ProductSection from './components/products/ProductSection';
 import ProductList from './components/products/ProductList';
 import ProductDetail from './components/products/ProductDetail';
+import LoginPage from './components/login/LoginPage';
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
               </div>
             }
           />
+           <Route path="/login" element={<LoginPage/>} />
           <Route path="/products" element={<ProductList />} />
           <Route path="/products/:id" element={<ProductDetail />} />
         </Routes>

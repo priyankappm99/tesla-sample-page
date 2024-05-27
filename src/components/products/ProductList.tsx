@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import SearchIcon from '@mui/icons-material/Search';
 import teslaModel3 from '../../assets/teslaModel3.avif';
 import teslaModelY from '../../assets/teslaModelY.avif';
@@ -29,6 +29,7 @@ const ProductList = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
   const productsPerPage = 3;
+  const navigate = useNavigate();
 
   const handleSearch = (event:any) => {
     setSearchQuery(event.target.value);
@@ -44,6 +45,15 @@ const ProductList = () => {
   const currentProducts = filteredProducts.slice(startIndex, startIndex + productsPerPage);
 
   const paginate = (pageNumber:any) => setCurrentPage(pageNumber);
+
+  const navigateToDetail = (id:any) => {
+    navigate(`/products/${id}`);
+  };
+
+  const navigateToLogin = (e:any) => {
+    e.stopPropagation();
+    navigate('/login');
+  };
 
   return (
     <section className="product-list-page">
@@ -62,13 +72,13 @@ const ProductList = () => {
       <h2>All Tesla Models</h2>
       <div className="product-list">
         {currentProducts.map(product => (
-          <div key={product.id} className="product-item">
+          <div key={product.id} className="product-item" onClick={() => navigateToDetail(product.id)}>
             <div className="product-image" style={{ backgroundImage: `url(${product.image})` }} />
             <div className="product-details">
               <h3>{product.name}</h3>
               <p>Price: {product.price}</p>
               <p>{truncateDescription(product.description, 100)}</p>
-              <Link to={`/products/${product.id}`} className="book-now-button">Book Now</Link>
+              <div onClick={navigateToLogin} className="book-now-button">Book Now</div>
             </div>
           </div>
         ))}
